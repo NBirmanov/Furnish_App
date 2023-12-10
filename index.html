@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+  <title>Furniro</title>
+</head>
+
+<body>
+  <header>
+    <div class="header__top">
+      <div class="logo">
+        <img src="images/Meubel House_Logos-05.svg" alt="" />
+        <p>Furniro</p>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Shop</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="btn">
+        <ul>
+          <li>
+            <button>
+              <img src="images/mdi_account-alert-outline.svg" alt="" />
+            </button>
+          </li>
+          <li>
+            <button><img src="images/akar-icons_search.svg" alt="" /></button>
+          </li>
+          <li>
+            <button><img src="images/akar-icons_heart.svg" alt="" /></button>
+          </li>
+          <li>
+            <button onclick="closeBack()">
+              <img src="images/ant-design_shopping-cart-outlined.svg" alt="" />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header__buttom">
+      <div class="buttom__nav">
+        <a href="">Home</a>
+        <img src="images/dashicons_arrow-up-alt2.svg" alt="" />
+        <a href="">Shop</a>
+        <img src="images/dashicons_arrow-up-alt2.svg" alt="" />
+      </div>
+      <p class="buttom__text">Asgaard sofa</p>
+    </div>
+  </header>
+  <div class="back" id="back">
+    <div class="product__cart">
+      <div class="cart__main">
+        <div class="cart__line">
+          <h2>Shopping Cart</h2>
+        </div>
+        <button class="close" onclick="closeBack()"><img src="images/Vector.svg" alt=""></button>
+      </div>
+      <div class="cart__content">
+        <div class="cart__section">
+          <div class="cart__img">
+            <img src="images/Asgaard sofa 5.png" alt="">
+          </div>
+          <div class="cart__desc">
+            <p>Asgaard sofa</p>
+            <p>1 x<span>Rs. 250,000.00</span></p>
+          </div>
+        </div>
+        <div class="cart__section">
+          <div class="cart__img">
+            <img src="images/Asgaard sofa 5.1.png" alt="">
+          </div>
+          <div class="cart__desc">
+            <p>Casaliving Wood</p>
+            <p>1 x<span>Rs. 270,000.00</span></p>
+          </div>
+        </div>
+        <div class="cart__sect">
+          <p>Subtotal</p> <span>Rs. 520,000.00</span>
+        </div>
+      </div>
+      <div class="cart__button">
+        <button class="cart__btn-1">Cart</button>
+        <button class="cart__btn-1">Checkout</button>
+        <button class="cart__btn-1">Comparison</button>
+      </div>
+    </div>
+  </div>
+  <main>
+    <section class="product">
+      <div class="images">
+        <div class="images_litle">
+          <div class="img-litle">
+            <img src="images/Outdoor sofa set 2.png" alt="" />
+          </div>
+          <div class="img-litle">
+            <img src="images/Outdoor sofa set_2 1.png" alt="" />
+          </div>
+          <div class="img-litle">
+            <img src="images/Stuart sofa 1.png" alt="" />
+          </div>
+          <div class="img-litle">
+            <img src="images/Maya sofa three seater (1) 1.png" alt="" />
+          </div>
+        </div>
+        <div class="images_big">
+          <div class="img-big">
+            <img src="images/Asgaard sofa 3.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="descriptions">
+        <h1>Asgaard sofa</h1>
+        <p class="price">Rs. 250,000.00</p>
+        <div class="review">
+          <div class="star">
+            <ul>
+              <li><img src="images/dashicons_star-filled.svg" alt=""></li>
+              <li><img src="images/dashicons_star-filled.svg" alt=""></li>
+              <li><img src="images/dashicons_star-filled.svg" alt=""></li>
+              <li><img src="images/dashicons_star-filled.svg" alt=""></li>
+              <li><img src="images/carbon_star-half.svg" alt=""></li>
+            </ul>
+          </div>
+          <p>5 Customer Review</p>
+        </div>
+        <div class="descriptions__text">
+          <p>Setting the bar as one of the loudest speakers in its class, the <br>
+            Kilburn is a compact, stout-hearted hero with a well-balanced <br>
+            audio which boasts a clear midrange and extended highs for a <br>
+            sound.
+          </p>
+        </div>
+        <form action="">
+          <p>Size</p>
+          <div class="size__form">
+            <input type="checkbox" id="size1" name="option" onclick="limitCheckboxSelection(this)">
+            <label for="size1"></label>
+            <input type="checkbox" id="size2" name="option" onclick="limitCheckboxSelection(this)">
+            <label for="size2"></label>
+            <input type="checkbox" id="size3" name="option" onclick="limitCheckboxSelection(this)">
+            <label for="size3"></label>
+          </div>
+          <p>Color</p>
+          <div class="color__form">
+            <input type="checkbox" id="color1" name="color" onclick="limitCheckColorSelection(this)">
+            <label for="color1"></label>
+            <input type="checkbox" id="color2" name="color" onclick="limitCheckColorSelection(this)">
+            <label for="color2"></label>
+            <input type="checkbox" id="color3" name="color" onclick="limitCheckColorSelection(this)">
+            <label for="color3"></label>
+          </div>
+
+          <div class="cart__box">
+            <div class="input-number">
+              <div class="input-number__minus" id="minus_btn" onclick="countAmount('minus')">-</div>
+              <input class="input-number__input" type="text" pattern="^[0-9]+$" value="1" id="amount">
+              <div class="input-number__plus" id="plus_btn" onclick="countAmount('plus')">+</div>
+            </div>
+            <button class="cart__btn">Add To Cart</button>
+          </div>
+        </form>
+
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer__text">
+      <p>SKU</p>
+      <p>:</p>
+      <p>SS001</p>
+      <p>Category</p>
+      <p>:</p>
+      <p>Sofas</p>
+      <p>Tags</p>
+      <p>:</p>
+      <p>Sofa, Chair, Home, Shop</p>
+      <p>Share</p>
+      <div class="links__block">
+        <button><img src="images/akar-icons_facebook-fill.svg" alt=""></button>
+        <button><img src="images/akar-icons_linkedin-box-fill.svg" alt=""></button>
+        <button><img src="images/ant-design_twitter-circle-filled.svg" alt=""></button>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
